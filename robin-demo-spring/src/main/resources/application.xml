@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+    <!-- 开启注解扫描 base-package属性：指定需要扫描的包,多个包之间使用,号隔开 a.b.c a.b.d a.b.e -->
+    <context:component-scan base-package="com.robin.demo.spring"/>
+
+    <bean id="userService" name="userService" class="com.robin.demo.spring.aop.UserService" />
+    <bean id="logAop" class="com.robin.demo.spring.aop.LogAop" />
+
+    <!--<aop:config>-->
+        <!--<aop:aspect id="logAop" ref="logAop" order="1">-->
+            <!--<aop:pointcut id="log" expression="execution(* com.robin.demo.spring.aop.*.*(..))" />-->
+            <!--<aop:before method="beforeLog" pointcut-ref="log"/>-->
+            <!--<aop:after method="afterLog" pointcut-ref="log"/>-->
+            <!--<aop:after-throwing method="afterThrowing" throwing="throwable" pointcut-ref="log"/>-->
+            <!--<aop:after-returning method="returning" returning="o" pointcut-ref="log"/>-->
+        <!--</aop:aspect>-->
+
+    <!--</aop:config>-->
+
+</beans>

@@ -1,0 +1,16 @@
+version '1.0.1'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    //阿里导出 https://github.com/alibaba/easyexcel
+    compile 'com.alibaba:easyexcel:1.1.2-beta5'
+    compile 'org.projectlombok:lombok:1.18.6'
+}

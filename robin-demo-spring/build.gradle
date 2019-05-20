@@ -1,0 +1,39 @@
+version "1.0.1"
+
+apply plugin: "java"
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+buildscript {
+    ext {
+        springVersion = "5.1.5.RELEASE"
+    }
+}
+
+dependencies {
+    testCompile group: "junit", name: "junit", version: "4.12"
+
+//    compile("org.springframework.boot:spring-boot-starter-web")
+
+    compile "org.springframework:spring-core:${springVersion}"
+    compile "org.springframework:spring-expression:${springVersion}"
+    compile "org.springframework:spring-beans:${springVersion}"
+    compile "org.springframework:spring-aop:${springVersion}"
+    compile "org.springframework:spring-context:${springVersion}"
+    //<!-- Various Application Context utilities, including EhCache, JavaMail,Quartz, and Freemarker integration Define this if you need any of these integrations>
+    compile "org.springframework:spring-context-support:${springVersion}"
+    compile "org.springframework:spring-tx:${springVersion}"
+    compile "org.springframework:spring-jdbc:${springVersion}"
+    compile "org.springframework:spring-web:${springVersion}"
+    compile "org.springframework:spring-webmvc:${springVersion}"
+    testCompile "org.springframework:spring-test:${springVersion}"
+
+    compile 'org.aspectj:aspectjweaver:1.8.13'
+    compile 'org.projectlombok:lombok:1.18.2'
+    compile("javax.servlet:javax.servlet-api:3.1.0")
+
+}

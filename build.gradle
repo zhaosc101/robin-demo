@@ -1,0 +1,6 @@
+
+subprojects {
+    version = '1.0.1'
+    group = 'com.robin.demo'
+    description = 'robin' // 设置描述
+}
