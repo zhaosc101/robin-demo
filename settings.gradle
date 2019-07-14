@@ -9,4 +9,5 @@ include 'robin-demo-java'
 include 'robin-demo-mybatis'
 include 'robin-demo-mq'
 include 'robin-demo-elasticsearch'
+include 'robin-demo-jwt'
 
