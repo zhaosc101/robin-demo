@@ -22,33 +22,22 @@ import java.util.ArrayList;
  */
 public class Ps {
 
-    public class Man <T> {
-
-        public void test() {
-
-        }
-    }
-
-    public class People {
-
+    static final int tableSizeFor(int cap) {
+        int n = cap - 1;
+        n |= n >>> 1;
+        n |= n >>> 2;
+        n |= n >>> 4;
+        n |= n >>> 8;
+        n |= n >>> 16;
+        return (n < 0) ? 1 : (n >= 100000) ? 100000 : n + 1;
     }
 
     public static void main(String[] args)
             throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        Type mySuperClass = new ArrayList<String>() {
-        }.getClass().getGenericSuperclass();
 
-        Type type = ((ParameterizedType) mySuperClass).getActualTypeArguments()[0];
-        System.out.println(type);
+        System.out.println(tableSizeFor(10));
+        System.out.println(tableSizeFor(16));
+        System.out.println(tableSizeFor(30));
 
-        ArrayList<String> list = new ArrayList<String>();
-        ArrayList list1 = list;
-        list1.add(12);
-        System.out.println(list1.get(0));
-
-        ArrayList<String> list2 = new ArrayList<String>();
-        Class clazz = list2.getClass();
-        Method m = clazz.getMethod("add", Object.class);
-        m.invoke(list, 100);
     }
 }

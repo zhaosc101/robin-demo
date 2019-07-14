@@ -14,4 +14,8 @@ dependencies {
     compile 'com.dangdang:elastic-job-lite-core:2.1.5'
 //    compile 'com.dangdang:elastic-job-lite-lifecycle:2.1.5'
     compile 'com.dangdang:elastic-job-lite-spring:2.1.5'
+//    compile ("org.springframework.boot:spring-boot-starter-parent:1.5.9.RELEASE")
+    compile ("org.springframework.boot:spring-boot-starter-web:1.5.9.RELEASE")
+    compile 'org.projectlombok:lombok:1.18.2'
+
 }
