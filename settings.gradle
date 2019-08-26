@@ -10,4 +10,8 @@ include 'robin-demo-mybatis'
 include 'robin-demo-mq'
 include 'robin-demo-elasticsearch'
 include 'robin-demo-jwt'
+include 'robin-demo-druid'
+include 'robin-demo-slidingValid'
+include 'robin-demo-slidingValid'
+include 'robin-demo-quartz'
 
